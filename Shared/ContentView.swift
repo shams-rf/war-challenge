@@ -50,9 +50,13 @@ struct ContentView: View {
                 
                 Button(action: {
                     
+                    // generate random number between 2 and 14
+                    let playerRand = Int.random(in: 2...14)
+                    let cpuRand = Int.random(in: 2...14)
+                    
                     // update cards
-                    playerCard = "card11"
-                    cpuCard = "card12"
+                    playerCard = "card" + String(playerRand)
+                    cpuCard = "card" + String(cpuRand)
                     
                     //update score
                     playerScore += 1
